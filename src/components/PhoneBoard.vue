@@ -242,7 +242,7 @@ export default {
   width: 130px;
   height: 22px;
   color: rgba(16, 16, 16, 1);
-  font-size: 15px;
+  font-size: 13px;
   text-align: left;
   font-family: SourceHanSansSC-regular;
 }

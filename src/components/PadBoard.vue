@@ -11,8 +11,50 @@
       <label class="Plancar">今日计划进车场次</label>
       <label class="complete">已完成车次</label>
     </div>
+      <div class="Pro">
+          <label class="date">20190920</label>
+          <label class="Innum">8</label>
+          <label class="planNum">32</label>
+          <label class="completeNum">12</label>
+      </div>
     <div class="pro_data"></div>
     <div class="baidumap" id="allmap"></div>
+      <div class="cards">
+          <van-tabs type="card">
+              <van-tab title="鲁Q399AV" >
+                  <p style="padding: .6rem 1rem;">交货单号：810233444</p>
+                  <p style="padding: .5rem 1rem;">正在装货（EO装车A站）</p>
+                  <p style="padding: .5rem 1rem;">物料名称：环氧乙烷</p>
+                  <p style="padding: .5rem 1rem;">交货数量：28.00T</p>
+              </van-tab>
+              <van-tab title="EO装车A站">正在装货（EO装车A站）</van-tab>
+              <van-tab title="15:10>15:46">交货数量：28.00T</van-tab>
+          </van-tabs>
+      </div>
+      <div class="button">
+          <van-button class="Pri" plain type="primary">苏A12253</van-button>
+          <van-button class="Dan" color="#1AAD19">苏M1233K</van-button>
+          <van-button class="Dan" color="#1AAD19">苏A5685A</van-button>
+          <van-button class="Dan" type="info">沪A8H891</van-button>
+          <van-button class="Dan" color="#1AAD19">沪C89099</van-button>
+          <van-button class="Dan" color="#FFE152">00256325</van-button>
+      </div>
+      <div class="button_o">
+          <van-button class="Pri_o" plain type="primary">待出厂</van-button>
+          <van-button class="Dan_o" plain type="primary">装站点</van-button>
+          <van-button class="Dan_o" plain type="primary">过磅中</van-button>
+          <van-button class="Dan_o" plain type="primary">待入厂</van-button>
+          <van-button class="Dan_o" plain type="primary">在途车辆</van-button>
+          <van-button class="Dan_o" plain type="primary">单据处理</van-button>
+      </div>
+      <div class="button_t">
+          <van-button class="Pri_t"  plain color="#08FFED">待出厂</van-button>
+          <van-button class="Dan_t" plain type="primary">装站点</van-button>
+          <van-button class="Dan_t" plain type="primary">过磅中</van-button>
+          <van-button class="Dan_t" plain type="primary">待入厂</van-button>
+          <van-button class="Dan_t" plain type="primary">在途车辆</van-button>
+          <van-button class="Dan_t" plain type="primary">单据处理</van-button>
+      </div>
     <div class="bg"></div>
   </div>
 </template>
@@ -47,10 +89,12 @@ export default {
 <style scoped>
 .pad-board {
   height: 100%;
+  width: 100%;
+    overflow: hidden;
 }
 
 .bg {
-  height: 91%;
+  height: 100%;
   background-color: #08FFED;
   /* for IE */
   filter: alpha(opacity=78);
@@ -65,12 +109,27 @@ export default {
 
 >>> .van-nav-bar__title {
   color: #fff;
+  font-size: 1.2rem;
+}
+
+>>> .van-tabs__nav--card .van-tab.van-tab--active {
+    color: #fff;
+    background-color: #5019fa;
+    z-index: 999;
+}
+
+>>> .van-tabs__nav--card .van-tab {
+    color: #5019fa;
+    line-height: 28px;
+    border-right: 1px solid #5019fa;
+    z-index: 999;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .progress {
     height: 36px;
     background-color: #002B56;
+    font-size: 1.2rem;
   }
 
   .time {
@@ -104,12 +163,32 @@ export default {
     background-color: #002B56;
     border: 2px solid #52719B;
   }
-
+.Pro{
+    position: absolute;
+    top: 6rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.date{
+    text-align: center;
+    padding: 0 1rem;
+}
+.Innum{
+    text-align: center;
+    padding: 0 9rem;
+}
+.planNum{
+    text-align: center;
+}
+.completeNum{
+    text-align: center;
+    padding: 0 10.5rem;
+}
   .baidumap {
     width: 53%;
-    height: 73%;
+    height: 65%;
     position: absolute;
-    top: 7%;
+    top: -5%;
     right: 48%;
     bottom: 0;
     margin: auto;
@@ -123,5 +202,52 @@ export default {
   .baidumap >>> .anchorBL {
     display: none !important;
   }
+  .cards{
+      height: 20rem;
+      width: 21rem;
+      position: absolute;
+      top: 10rem;
+      left: 26rem;
+      background-color: #e6e6e6;
+  }
+  .button{
+      position: absolute;
+      top: 57rem;
+      /*left: 1rem;*/
+  }
+   .Pri{
+       width: 7rem;
+       margin: 0 .2rem 0 1rem;
+   }
+   .Dan{
+       width: 7rem;
+       margin: 0 .2rem;
+   }
+    .button_o{
+        position: absolute;
+        top: 60rem;
+        /*left: 1rem;*/
+    }
+    .Pri_o{
+        width: 7rem;
+        margin: 0 .2rem 0 1rem;
+    }
+    .Dan_o{
+        width: 7rem;
+        margin: 0 .2rem;
+    }
+    .button_t{
+        position: absolute;
+        top: 54rem;
+        /*left: 1rem;*/
+    }
+    .Pri_t{
+        width: 7rem;
+        margin: 0 .2rem 0 1rem;
+    }
+    .Dan_t{
+        width: 7rem;
+        margin: 0 .2rem;
+    }
 }
 </style>
