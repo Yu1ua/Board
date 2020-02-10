@@ -61,6 +61,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      width: ''
+    }
+  },
   mounted() {
     this.baiduMap()
   },
@@ -90,7 +95,7 @@ export default {
 .pad-board {
   height: 100%;
   width: 100%;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .bg {
@@ -113,16 +118,16 @@ export default {
 }
 
 >>> .van-tabs__nav--card .van-tab.van-tab--active {
-    color: #fff;
-    background-color: #5019fa;
-    z-index: 999;
+  color: #fff;
+  background-color: #5019fa;
+  z-index: 999;
 }
 
 >>> .van-tabs__nav--card .van-tab {
-    color: #5019fa;
-    line-height: 28px;
-    border-right: 1px solid #5019fa;
-    z-index: 999;
+  color: #5019fa;
+  line-height: 28px;
+  border-right: 1px solid #5019fa;
+  z-index: 999;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -163,27 +168,33 @@ export default {
     background-color: #002B56;
     border: 2px solid #52719B;
   }
-.Pro{
+
+  .Pro {
     position: absolute;
     top: 6rem;
     color: #fff;
     font-size: 1.5rem;
-}
-.date{
+  }
+
+  .date {
     text-align: center;
     padding: 0 1rem;
-}
-.Innum{
+  }
+
+  .Innum {
     text-align: center;
     padding: 0 9rem;
-}
-.planNum{
+  }
+
+  .planNum {
     text-align: center;
-}
-.completeNum{
+  }
+
+  .completeNum {
     text-align: center;
     padding: 0 10.5rem;
-}
+  }
+
   .baidumap {
     width: 53%;
     height: 65%;
@@ -202,52 +213,62 @@ export default {
   .baidumap >>> .anchorBL {
     display: none !important;
   }
-  .cards{
-      height: 20rem;
-      width: 21rem;
-      position: absolute;
-      top: 10rem;
-      left: 26rem;
-      background-color: #e6e6e6;
+
+  .cards {
+    height: 20rem;
+    width: 21rem;
+    position: absolute;
+    top: 10rem;
+    left: 26rem;
+    background-color: #e6e6e6;
   }
-  .button{
-      position: absolute;
-      top: 57rem;
-      /*left: 1rem;*/
+
+  .button {
+    position: absolute;
+    top: 57rem;
+    /*left: 1rem;*/
   }
-   .Pri{
-       width: 7rem;
-       margin: 0 .2rem 0 1rem;
-   }
-   .Dan{
-       width: 7rem;
-       margin: 0 .2rem;
-   }
-    .button_o{
-        position: absolute;
-        top: 60rem;
-        /*left: 1rem;*/
-    }
-    .Pri_o{
-        width: 7rem;
-        margin: 0 .2rem 0 1rem;
-    }
-    .Dan_o{
-        width: 7rem;
-        margin: 0 .2rem;
-    }
-    .button_t{
-        position: absolute;
-        top: 54rem;
-        /*left: 1rem;*/
-    }
-    .Pri_t{
-        width: 7rem;
-        margin: 0 .2rem 0 1rem;
-    }
-    .Dan_t{
-        width: 7rem;
-        margin: 0 .2rem;
-    }
+
+  .Pri {
+    width: 7rem;
+    margin: 0 .2rem 0 1rem;
+  }
+
+  .Dan {
+    width: 7rem;
+    margin: 0 .2rem;
+  }
+
+  .button_o {
+    position: absolute;
+    top: 60rem;
+    /*left: 1rem;*/
+  }
+
+  .Pri_o {
+    width: 7rem;
+    margin: 0 .2rem 0 1rem;
+  }
+
+  .Dan_o {
+    width: 7rem;
+    margin: 0 .2rem;
+  }
+
+  .button_t {
+    position: absolute;
+    top: 54rem;
+    /*left: 1rem;*/
+  }
+
+  .Pri_t {
+    width: 7rem;
+    margin: 0 .2rem 0 1rem;
+  }
+
+  .Dan_t {
+    width: 7rem;
+    margin: 0 .2rem;
+  }
 }
 </style>

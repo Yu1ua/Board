@@ -129,7 +129,6 @@ export default {
   data() {
     return {
       width: '',
-      height: '',
       active: 0,
       icon_data: {
         active: require('../assets/select_data.png'),
